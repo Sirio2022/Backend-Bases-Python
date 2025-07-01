@@ -7,7 +7,8 @@ print(f"{tabla_a_calcular} x 1 = {tabla_a_calcular * 1}")
 print(f"{tabla_a_calcular} x 2 = {tabla_a_calcular * 2}")
 print(f"{tabla_a_calcular} x 3 = {tabla_a_calcular * 3}")
 print(f"{tabla_a_calcular} x 4 = {tabla_a_calcular * 4}")
-print(f"{tabla_a_calcular} x 5 = {tabla_a_calcular * 5}")"""
+print(f"{tabla_a_calcular} x 5 = {tabla_a_calcular * 5}")
+"""
 
 #num = 1
 for i in range(hasta_donde):
