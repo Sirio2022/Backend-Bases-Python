@@ -16,4 +16,4 @@ for i in range(hasta_donde):
     #num = num + 1
 
 while 1 != 3:
-    print("hola")
+    print("hola") # Este es un bucle infinito, se detiene con Ctrl+C o cerrando la terminal
