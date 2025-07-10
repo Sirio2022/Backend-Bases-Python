@@ -25,12 +25,20 @@ def eliminar_pelicula():
     sql.eliminar_pelicula(nombre_pelicula)
     print(f"Pelicula '{nombre_pelicula}' eliminada correctamente.")
 
+
+catalogo = Catalogo("Mi Catálogo de Películas")
 def listar_peliculas():
     peliculas = sql.listar_peliculas()
 
-    if peliculas:
-        print("Lista de películas:")
-        for pelicula in peliculas:
-            print(f"{pelicula['id']}. {pelicula['nombre']} - {pelicula['duracion']} minutos - {pelicula['genero']}")
+    for pelicula in peliculas:
+        pelicula_guardada = Pelicula(pelicula['nombre'], pelicula['duracion'], pelicula['genero'])
+        catalogo.peliculas.append(pelicula_guardada)
+
+    if catalogo.peliculas:
+        print("Peliculas en el catálogo:")
+        for pelicula in catalogo.peliculas:
+            print(f"Nombre: {pelicula.nombre}, Duración: {pelicula.duracion} minutos, Género: {pelicula.genero}")
     else:
-        print("No hay películas registradas.")
+        print("No hay peliculas en el catálogo.")
+
+

@@ -60,7 +60,11 @@ def eliminar_pelicula(nombre):
 
 def listar_peliculas():
     conexion, cursor = conectar_db()
-    sql = "SELECT * FROM pelicula;"
+    sql = """
+        SELECT pelicula.id, pelicula.nombre, pelicula.duracion, genero.nombre
+        FROM pelicula
+        JOIN genero ON pelicula.genero = genero.id;
+    """
     cursor.execute(sql)
     resultados = cursor.fetchall()
     conexion.close()
